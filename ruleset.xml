@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- See http://pear.php.net/manual/en/package.php.php-codesniffer.annotated-ruleset.php -->
+<ruleset name="ArneDrupal">
+ <description>Arnes Drupal code checker</description>
+
+ <rule ref="Drupal" />
+ <rule ref="DrupalSecure" />
+ <rule ref="ArneDrupal.CodeAnalysis.VariableAnalysis">
+   <properties>
+     <property name="allowUnusedFunctionParameters" value="1" />
+   </properties>
+   <exclude-pattern>*.tpl.php</exclude-pattern>
+ </rule>
+ <rule ref="ArneDrupal.CodeAnalysis.VariableAnalysis.UndefinedVariable">
+   <exclude-pattern>settings*.php</exclude-pattern>
+ </rule>
+
+
+ <extension>php</extension>
+ <extension>module</extension>
+ <extension>inc</extension>
+ <extension>install</extension>
+ <extension>test</extension>
+ <extension>profile</extension>
+ <extension>theme</extension>
+ <extension>js</extension>
+ <extension>css</extension>
+ <extension>info</extension>
+ <extension>txt</extension>
+</ruleset>
